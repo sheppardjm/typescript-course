@@ -2,8 +2,14 @@ import React from 'react';
 import DataGrid from "./components/DataGrid";
 import './App.css';
 
+export interface User {
+  id: number,
+  name: string,
+  age: number,
+};
+
 function App() {
-  const users = [
+  const users: User[] = [
     {
       id: 1, name: "John", age: 55,
     },
