@@ -1,16 +1,17 @@
-import { User } from "../App";
+interface Item {
+  id: number,
+};
 
-interface DataGridProps {
-  //Do not use any
-  items: User[];
+interface DataGridProps<T> {
+  items: T[];
 }
 
-export default function DataGrid({ items }: DataGridProps) {
+export default function DataGrid<T extends Item>({ items }: DataGridProps<T>) {
   return (
     <>
       <ul>
         {items.map((item) => (
-          <li>{JSON.stringify(item)}</li>
+          <li key={item.id} >{JSON.stringify(item)}</li>
         ))}
       </ul>
     </>

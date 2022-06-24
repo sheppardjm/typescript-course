@@ -21,9 +21,22 @@ function App() {
     },
   ];
 
+  const orders = [
+    {
+      id: 1, quantity: 3, amount: 32,
+    },
+    {
+      id: 2, quantity: 5, amount: 87,
+    },
+    {
+      id: 3, quantity: 1, amount: 50,
+    },
+  ];
+
   return (
     <>
       <DataGrid items={users} />
+      <DataGrid items={orders} />
     </>
   );
 }
